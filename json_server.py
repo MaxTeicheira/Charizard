@@ -14,7 +14,7 @@ class MainHandler(tornado.web.RequestHandler):
     def post(self):
         print self.request.arguments
         client = tr.Client()
-            try:
+        try:   
             torrent = client.add_torrent()
         except:
             torrent = client.get_torrents([])
